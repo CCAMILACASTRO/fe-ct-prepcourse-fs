@@ -225,23 +225,16 @@ function breakStatement(num) {
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
 
-   let nuevoArray = [];
-
-   for(let i = 0; i < 10; i++) {
-      num += 2;
-      nuevoArray.push(num);
-
-      if(i == nuevoArray){
+   let valor = []
+   for (let i = 0; i < 10; i++){
+      valor.push(num += 2)
+      if (i === num){
          break;
       }
-   } 
-   return 'Se interrumpio la ejecucion';
-      
-   
-
-
-
- 
+   }
+   if (valor.length < 9) return "Se interrumpió la ejecución";
+   return valor 
+        
 }
 
 function continueStatement(num) {
@@ -251,6 +244,15 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   let valor = []
+   for (let i = 0; i < 10; i++){
+      if (i === 5){
+         continue;
+      }
+      valor.push(num += 2)
+   }
+   return valor;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
