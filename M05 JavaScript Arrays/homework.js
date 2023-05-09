@@ -58,6 +58,7 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   
     if (array = array.includes(elemento)) {
        return true;
     } else {
@@ -162,6 +163,7 @@ function todosIguales(array) {
       if (array[i]!== numeros){
          return false;
       } 
+     
    }
    return true;
 
