@@ -9,8 +9,8 @@ function crearGato(nombre, edad) {
    // Tu código:
 
    let objeto = {
-      nombre, 
-      edad,
+      nombre: nombre, 
+      edad: edad,
       meow: function(){ 
          return "Meow!" 
       }
@@ -24,7 +24,11 @@ function nuevoUsuario(nombre, email, password) {
    // Retornar el objeto.
    // Tu código:
 
-   let usuario = {nombre, email, password}
+   let usuario = {
+      nombre: nombre,
+      email: email, 
+      password: password
+   }
    return usuario; 
 };
 
@@ -76,7 +80,7 @@ function tieneEmail(objetoUsuario) {
    // Tu código:
 
      
-   if (objetoUsuario.email) return true;
+   if (objetoUsuario['email']) return true;
    return false;
 
 }
@@ -148,16 +152,9 @@ function sumarLikesDeUsuario(objetoUsuario) {
    let sumaLikes = 0;
                      // hasta la cantidad de posteos que haya con los likes adentro.
    for(let i = 0; i < objetoUsuario.posts.length; i++) {
-      sumaLikes = sumaLikes + objetoUsuario.posts[i].likes; // Debo ingresar hasta likes 
-   }
+      sumaLikes = sumaLikes + objetoUsuario.posts[i].likes; // Le sumo el numero de Like ubicado en la posicion de i  
+   }                                                       // dentro de la prpopiedad del objeto.
    return sumaLikes; 
-
-   // objetoUsuario.posts.reduce((acumulador, objetoUsuario.posts) => acumulador + usuario.posts.likes, 0);
-   
-    
-   
-  
-
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
@@ -171,12 +168,13 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-
+   
+   objetoProducto.calcularPrecioDescuento;
    objetoProducto.calcularPrecioDescuento = function() {  // Asi agregamos una funcion a la propiedad.
-      let descuento = this.precio * this.porcentajeDeDescuento  // creamos la variable descuento para guardar el precio del produto
-      let precioFinal = this.precio - descuento                 // por el procentaje de descuento
-      return precioFinal;                                       // Luego restamos al precio el descuento      
-   }   
+      let descuento = this.precio * this.porcentajeDeDescuento  // creamos la variable descuento para guardar el precio 
+      let precioFinal = this.precio - descuento                 // del produto por el procentaje de descuento
+      return precioFinal;                                       //Guardamos los resultados en variables.      
+   }                                                            // Luego restamos al precio el descuento
    return objetoProducto
 }
 
