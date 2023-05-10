@@ -175,7 +175,7 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
       let precioFinal = this.precio - descuento                 // del produto por el procentaje de descuento
       return precioFinal;                                       //Guardamos los resultados en variables.      
    }                                                            // Luego restamos al precio el descuento
-   return objetoProducto
+   return objetoProducto;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
